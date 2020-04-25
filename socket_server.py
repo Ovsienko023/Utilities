@@ -6,7 +6,7 @@ sock.bind(('',8888))
 sock.listen(1)
 
 conn, adr = sock.accept()
-print(type(conn))
+
 while True:
     data = conn.recv(1024)
     if not data:
