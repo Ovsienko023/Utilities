@@ -7,6 +7,23 @@ loger = dict()
 
 def main_bot(request):
     print(request.json)
+    send_in_loger(request)
+    
+    bot = TeleWrapper(request)
+    define_metod(bot, request)
+
+    if bot.message_decod(message) == "board_create":
+        print(bot.message_decod(message))
+        bot.data_collection_board_create()
+
+    else:
+        print(loger[user_name][-2])
+        if loger[user_name][-2]["message"] == "Создать доску":
+            print("!")
+        elif loger[user_name][-3]["message"] == "Создать доску":
+            print("!!")
+
+def send_in_loger(request):
     user_name = request.json["message"]["from"]["username"]
     message = request.json['message']['text']
     date = request.json["message"]["date"]
@@ -18,11 +35,18 @@ def main_bot(request):
         loger[user_name].append({"date": date, "message": message})
     print()
     print(loger)
-    bot = TeleWrapper(request)
-    
-    if bot.message_decod(message) == "board_create":
+
+def define_metod(bot, request):
+    user_name = request.json["message"]["from"]["username"]
+    message = request.json['message']['text']
+    com = bot.message_decod(message)
+
+    if com == "board_create":
         print(bot.message_decod(message))
         bot.data_collection_board_create()
+    elif com == "card_create":
+        print(bot.message_decod(message))
+        bot.data_collection_card_create()
 
     else:
         print(loger[user_name][-2])
@@ -30,20 +54,13 @@ def main_bot(request):
             print("!")
         elif loger[user_name][-3]["message"] == "Создать доску":
             print("!!")
-        
-    # # bot.send_start_message()
-    # # if bot.is_start():
-    # bot.main_menu_keyboard()
-    # command = bot.message_decod(request.json['message']['text'])
-    # data = bot.qwe()
-    # ClientWrapper('Bob', '123', command, data=data)
-    # bot.data_collection_board_create()
-    # bot.data_collection_board_create().send()
-    
+
+
+
 class TeleWrapper:
     def __init__(self, request):
         self.request = request
-        self.token = r"1026862035:AAG-mBQD7TgE_yaiE3uC38-W-Q5KRQ6uy1I"
+        self.token = r"my_token"
         self.method = "sendMessage"
         self.url = f"https://api.telegram.org/bot{self.token}/{self.method}"
 
@@ -55,12 +72,6 @@ class TeleWrapper:
         if messege.lower() == '/start':
             print('Запуск бота')
             return True
-
-    def forse(self):
-        method = "ForceReply"
-        url = f"https://api.telegram.org/bot{self.token}/{method}"
-        params = {"force_reply": "True"}
-        requests.post(self.url, params)
 
 
     def send_start_message(self):
@@ -110,7 +121,6 @@ class TeleWrapper:
         return commands.get(messege)
 
     def data_collection_board_create(self):
-        data = dict()
         messege = """*        Создание Доски* \n\nНеобходимо ввести следующие параметры:
         1. Название доски
         2. Колонки на доске\n\nВедите название доски и колонки через ";", названия колонок через запятую, как показанно в примере:
@@ -120,26 +130,17 @@ class TeleWrapper:
         params = {"chat_id": chat_id, "text": messege, "parse_mode": "Markdown", "reply_to_message": message_id}
         requests.post(self.url, params)
 
-    def otvet():
-        messege = ''
+
+    def data_collection_card_create(self):
+        messege = """*        Создание Карточки* \n\nНеобходимо ввести следующие параметры:
+        1. Название доски
+        2. Колонки на доске\n\nВедите название карточки и колонки через ";", названия колонок через запятую, как показанно в примере:
+        \nПример: ( Доска разработчика;ToDo,InProgress,Done )""" 
         chat_id = self.request.json['message']['chat']['id']
         message_id = self.request.json['message']['message_id']
         params = {"chat_id": chat_id, "text": messege, "parse_mode": "Markdown", "reply_to_message": message_id}
         requests.post(self.url, params)
-        
-        # messege = """Введите названия колонок: 
-        # (названия колонок вводятся *без пробелов* и *через запятую*)""" 
-        # chat_id = self.request.json['message']['chat']['id']
-        # params = {"chat_id": chat_id, "text": messege, "parse_mode": "Markdown"}
-        # requests.post(self.url, params)        
-        # arg = yield
-        # data['columns'] = arg
-        # return data
 
-    def data_collection_card_create(self):
-        data = dict()
-
-        return data
     
     def data_collection_card_update(self):
         data = dict()
@@ -173,27 +174,3 @@ class TeleWrapper:
         chat_id = self.request.json['message']['chat']['id']
         params = {"chat_id": chat_id, "text": messege, "parse_mode": "Markdown"}
         requests.post(self.url, params)
-
-
-
-
-
-
-# { "chat_id":" <id>","text": "Жмякай", "reply_markup": { "keyboard": [ [ {"text": "Кнопка 1"}, {"text": "Кнопка 2"} ], [ {"text": "Кнопка 3"}, {"text": "Кнопка 4"} ] ] } } 
-# {'update_id': 457748742, 
-# 'message': {'message_id': 72, 
-#                 'from': {'id': 831026568, 
-#                             'is_bot': False, 
-#                             'first_name': 'Виктор', 
-#                             'last_name': 'Овсиенко', 
-#                             'username': 'ovsienko023', 
-#                             'language_code': 'ru'}, 
-#                 'chat': {'id': 831026568, 
-#                         'first_name': 'Виктор',
-#                         'last_name': 'Овсиенко', 
-#                         'username': 'ovsienko023', 
-#                         'type': 'private'}, 
-#                         'date': 1587888836, 
-#                         'text': 'q'}}
-# ###
-# print(request.headers)
