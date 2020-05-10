@@ -7,3 +7,8 @@ Class for connecting to the database using the psycopg2 module
 ## socket-server.py and socket-client.py
 Example of a simple server and client on a socket
 
+## telegram_bot.py
+Operating time for the telegram bot
+
+## class_text_color.py
+Сlass for changing color and boldness of text in the terminal 
