@@ -12,3 +12,6 @@ Operating time for the telegram bot
 
 ## class_text_color.py
 Сlass for changing color and boldness of text in the terminal 
+
+## flask_session.py
+Shows session work in flask
