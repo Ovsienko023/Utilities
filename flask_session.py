@@ -2,6 +2,7 @@ from flask import Flask, session
 
 app = Flask(__name__)
 app.secret_key = 'app secret key'
+# print(app.config['SECRET_KEY'])
 
 @app.route('/<login>')
 def index(login):
