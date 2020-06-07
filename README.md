@@ -18,3 +18,6 @@ Shows session work in flask
 
 ## exemple_pandas.py
 Exemple pars xlsx file
+
+## observer_pattern.py
+Observer pattern implementation
