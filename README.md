@@ -19,10 +19,9 @@ Shows session work in flask
 ## exemple_pandas.py
 Exemple pars xlsx file
 
-<<<<<<< HEAD
-## translate.py
-Simple word translation
-=======
 ## observer_pattern.py
 Observer pattern implementation
->>>>>>> 8d68d97b7219c18a836d2a0b0cf0d2e3e05737d3
+
+## translate.py
+Simple word translation
+
