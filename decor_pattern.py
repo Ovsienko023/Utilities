@@ -25,12 +25,6 @@ class CondimentDecorator(Beverage):
 
 
 
-# a = CondimentDecorator()
-# print(a.description)
-# print(a.get_description())
-
-# Base
-
 class Espresso(Beverage):
     def __init__(self):
         self.description = 'Espresso'
