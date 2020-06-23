@@ -25,3 +25,5 @@ Observer pattern implementation
 ## translate.py
 Simple word translation
 
+## email.py
+send email messege in python
