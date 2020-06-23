@@ -22,6 +22,9 @@ Exemple pars xlsx file
 ## observer_pattern.py
 Observer pattern implementation
 
+## decor_pattern.py
+Observer pattern decorator
+
 ## translate.py
 Simple word translation
 
