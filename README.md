@@ -33,3 +33,6 @@ Send email messege in python
 
 ## context_manager.py
 Context manager for indenting
+
+## space_in_star.py
+replace spaces in "*"
