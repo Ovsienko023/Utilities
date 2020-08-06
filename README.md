@@ -36,3 +36,7 @@ Context manager for indenting
 
 ## space_in_star.py
 replace spaces in "*"
+
+## space_in_replace.py
+replace spaces in "%20".
+It's better "space_in_stars.py"
