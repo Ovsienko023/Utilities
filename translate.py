@@ -17,3 +17,4 @@ def translate_ru_en(word):
 
 print(translate_en_ru('dog'))
 print(translate_ru_en('собака'))
+
