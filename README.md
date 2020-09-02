@@ -46,3 +46,7 @@ example fastapi
 
 ## bot_telebot.py
 simple bot on telebot library
+
+
+## Pygame
+test cases of the paygame library
