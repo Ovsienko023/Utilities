@@ -43,3 +43,6 @@ It's better "space_in_stars.py"
 
 ## fastapi.py
 example fastapi
+
+## bot_telebot.py
+simple bot on telebot library
