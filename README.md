@@ -1,6 +1,9 @@
 # Utilities
 This repository stores useful classes and functions
 
+## Pygame
+test cases of the paygame library
+
 ## class_WrapperBD.py 
 Class for connecting to the database using the psycopg2 module
 
@@ -48,5 +51,6 @@ example fastapi
 simple bot on telebot library
 
 
-## Pygame
-test cases of the paygame library
+## password_hash.py
+gen password hash func()
+
