@@ -50,7 +50,8 @@ example fastapi
 ## bot_telebot.py
 simple bot on telebot library
 
-
 ## password_hash.py
 gen password hash func()
 
+## random_password.py
+generate random password
