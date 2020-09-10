@@ -6,11 +6,13 @@ test cases of the paygame library
 
 ## flask_api
 * ### flask_rout.py
-example flask rout and flask abort
+    example flask rout and flask abort
 * ### flask_session.py
-Shows session work in flask
+    Shows session work in flask
 * ### password_hash.py
-gen password hash func()
+    gen password hash func()
+* ### flask_api_authorization.py
+    example: request.authorization
 
 ## class_WrapperBD.py 
 Class for connecting to the database using the psycopg2 module
