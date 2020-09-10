@@ -7,9 +7,9 @@ test cases of the paygame library
 ## flask_api
 * ### flask_rout.py
 example flask rout and flask abort
-### flask_session.py
+* ### flask_session.py
 Shows session work in flask
-### password_hash.py
+* ### password_hash.py
 gen password hash func()
 
 ## class_WrapperBD.py 
