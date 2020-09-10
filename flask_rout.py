@@ -7,5 +7,7 @@ def get_task(task_id):
         abort(404)
     return jsonify({'task': task[0]})
 
+task[0]['title'] = request.json.get('title', task[0]['title'])
+#  request.json.get
 #  <int:task_id>
 #  abort(404)
