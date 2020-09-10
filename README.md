@@ -13,6 +13,8 @@ test cases of the paygame library
     gen password hash func()
 * ### flask_api_authorization.py
     example: request.authorization
+* ### flaks_decorator_auth.py
+    example: @authorization
 
 ## class_WrapperBD.py 
 Class for connecting to the database using the psycopg2 module
