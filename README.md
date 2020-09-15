@@ -63,5 +63,7 @@ simple bot on telebot library
 ## random_password.py
 generate random password
 
+## logger.py
+example logger
 
 
