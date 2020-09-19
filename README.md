@@ -4,6 +4,18 @@ This repository stores useful classes and functions
 ## Pygame
 test cases of the paygame library
 
+## flask_api
+* ### flask_rout.py
+    example flask rout and flask abort
+* ### flask_session.py
+    Shows session work in flask
+* ### password_hash.py
+    gen password hash func()
+* ### flask_api_authorization.py
+    example: request.authorization
+* ### flaks_decorator_auth.py
+    example: @authorization
+
 ## class_WrapperBD.py 
 Class for connecting to the database using the psycopg2 module
 
@@ -16,8 +28,6 @@ Operating time for the telegram bot
 ## class_text_color.py
 Сlass for changing color and boldness of text in the terminal 
 
-## flask_session.py
-Shows session work in flask
 
 ## exemple_pandas.py
 Exemple pars xlsx file
@@ -50,9 +60,16 @@ example fastapi
 ## bot_telebot.py
 simple bot on telebot library
 
+## random_password.py
+generate random password
 
-## password_hash.py
-gen password hash func()
+## logger.py
+example logger
 
+<<<<<<< HEAD
 ## parallel_launch.py
 parallel launch function 
+=======
+## unittest.py
+launching several test cases
+>>>>>>> 4c012e6022fa910ce09ff33d3cc42e3b9f5c6721
