@@ -54,3 +54,5 @@ simple bot on telebot library
 ## password_hash.py
 gen password hash func()
 
+## parallel_launch.py
+parallel launch function 
