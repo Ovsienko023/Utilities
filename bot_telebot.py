@@ -3,7 +3,7 @@ import requests
 import json
 import random
 # from config import token
-token = '1205575777:AAF7_nZpA6guaj0N29oRj5f_VHCSjHG4bfE'
+token = ''
 
 bot = telebot.TeleBot(token)
 

@@ -66,10 +66,5 @@ generate random password
 ## logger.py
 example logger
 
-<<<<<<< HEAD
 ## parallel_launch.py
 parallel launch function 
-=======
-## unittest.py
-launching several test cases
->>>>>>> 4c012e6022fa910ce09ff33d3cc42e3b9f5c6721
