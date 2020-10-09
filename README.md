@@ -74,3 +74,6 @@ example asincio
 
 ## is_json.py
 func is valid json
+
+## cerberus.py
+example cerberus Usage
