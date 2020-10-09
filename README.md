@@ -71,3 +71,6 @@ parallel launch function
 
 ## asincio.py
 example asincio
+
+## is_json.py
+func is valid json
