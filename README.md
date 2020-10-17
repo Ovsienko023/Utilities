@@ -15,6 +15,9 @@ test cases of the paygame library
     example: request.authorization
 * ### flaks_decorator_auth.py
     example: @authorization
+* ### gen_token.py
+    generate tokens
+
 
 ## class_WrapperBD.py 
 Class for connecting to the database using the psycopg2 module
