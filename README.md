@@ -6,6 +6,8 @@ example aiohttp project
 
 ## Pygame
 test cases of the paygame library
+* ### mp3_pyglet.py
+    example run sound file.mp3
 
 ## flask_api
 * ### flask_rout.py
