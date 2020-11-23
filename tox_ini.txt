@@ -1,0 +1,39 @@
+[tox]
+envlist =
+          tests
+          build
+          py37-{windows, linux}
+
+skipsdist = True
+
+[consts]
+deps = pytest
+build_web_api = 'build_web_api'
+dist_web_api = 'dist_web_api'
+
+
+[testenv:build]
+allowlist_externals=*
+deps = pipenv
+
+commands =
+    pipenv run pyinstaller --clean --name web_api --workpath ./{[consts]build_web_api} --distpath ./{[consts]dist_web_api} ./app/__main__.py
+
+
+[testenv:tests]
+allowlist_externals=*
+deps = pipenv
+commands =
+    pipenv install --dev --ignore-pipfile
+    python -m unittest discover
+
+
+[testenv]
+allowlist_externals=*
+deps = pipenv
+platform  = windows: win32
+            linux: linux
+commands =
+    windows: del /s /q {[consts]build_web_api} {[consts]dist_web_api} 
+    windows: rmdir /s /q {[consts]build_web_api}{[consts]dist_web_api} 
+    linux: rm -r {[consts]build_web_api} {[consts]dist_web_api}
