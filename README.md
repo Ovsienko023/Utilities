@@ -91,3 +91,6 @@ example argparse
 
 ## tox_ini.txt
 example tox.ini
+
+## aiojobs_in_class
+example aiojobs
