@@ -11,7 +11,14 @@ from cerberus.errors import BasicErrorHandler
     {'minlength': 1, 'maxlength': 3}
     {'nullable': True}  # значение ключа может быть None
     {'regex': r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'}  # Для email
-
+    {'empty': False}  # значение не должно быть пустым ''
+    {'required': True}  # обязательное значение
+    {'coerce': int}  #  пытается сделать int()
+    {'allowed': ['password']}  #  сверяет значение ключа с листом
+    {'allowed': ['refresh_token']}  # на конкретное поле
+    {'rename': 'bar'}  # переименование
+    {'default': 'my_value'}  # задание значения ключу по умолчанию
+    {'coerce': to_bool}  # преведение к булевому типу: 'true' -> True
 """ 
 
 
