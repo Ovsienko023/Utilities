@@ -20,3 +20,11 @@ super_logger = MyLogging().setup_logger('core_logic',
                                         'Application/logger/logfile.log')
 
 super_logger.error(f"user: {name}: Authentication Error")
+
+# -------------------------LOGURU--------------------------------------------
+
+from loguru import logger
+
+
+logger.add(os.path.join(log_dir, "api.log"), rotation="5MB", retention=5)
+logger.error("error message")
