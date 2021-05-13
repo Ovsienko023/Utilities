@@ -23,6 +23,11 @@ func main() {
 			panic(err)
 		}
 		fmt.Println(value)
+
+	}
+	err = file.Close()
+	if err != nil {
+		log.Fatal(err)
 	}
 
 }
