@@ -1,33 +1,28 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"log"
 	"os"
-	"strconv"
+	"strings"
 )
 
-func main() {
-	file, err := os.Open("tex.txt")
-
+func readFileContents() {
+	bytes, err := os.ReadFile("data.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
-	scaner := bufio.NewScanner(file)
-	for scaner.Scan() {
-		// fmt.Println(scaner.Text())
-		// fmt.Println(reflect.TypeOf(scaner.Text()))
-		value, err := strconv.ParseFloat(scaner.Text(), 64)
-		if err != nil {
-			panic(err)
+	fileText := string(bytes[:])
+
+	lst := strings.Split(fileText, ";")
+
+	for ind, num := range lst {
+		if num == "0" {
+			fmt.Println(ind + 1)
 		}
-		fmt.Println(value)
-
 	}
-	err = file.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
+}
 
+func main() {
+	readFileContents()
 }
